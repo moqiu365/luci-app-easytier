@@ -22,7 +22,7 @@ jobs:
           make defconfig
           cd /opt/openwrt-sdk*
           make package/luci-app-easytier/compile V=s -j1
-          cd /opt/openwrt-sdk*/bin/packages/aarch64_generic/base
+          cd /opt/openwrt-sdk*/bin/packages/x86_64/base
           ls
           mv *.ipk /opt/luci-app-easytier_all.ipk
       - name: 上传
