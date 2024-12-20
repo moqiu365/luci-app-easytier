@@ -9,8 +9,6 @@ jobs:
       - uses: actions/checkout@v4
       - name: 下载工具链
         run: |
-          apt update
-          apt install zstd
           sudo timedatectl set-timezone Asia/Shanghai
           wget -qO /opt/sdk.tar.zst https://mirror-03.infra.openwrt.org/releases/24.10.0-rc1/targets/x86/64/openwrt-sdk-24.10.0-rc1-x86-64_gcc-13.3.0_musl.Linux-x86_64.tar.zst
           tar  -I zstd /opt/sdk.tar.zst -C /opt
